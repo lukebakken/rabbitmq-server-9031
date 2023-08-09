@@ -1,3 +1,7 @@
+.classpath
+.project
+.settings/
+target/
 *~
 .sw?
 .*.sw?
@@ -10,9 +14,9 @@
 *.iws
 .DS_Store
 \#~
-/.idea/
-/deps/
-/target/
-/.classpath
-/.project
-/.settings
+.idea/
+deps/
+target/
+.classpath
+.project
+.settings
