@@ -7,9 +7,9 @@ public class App
     public static void main( String[] args )
     {
         System.out.println("[INFO] rabbitmq-server-9031 test application");
-        org.apache.qpid.jms.JmsConnectionFactory jmsConnectionFactory = new org.apache.qpid.jms.JmsConnectionFactory("amqps://host:5671");
-        jmsConnectionFactory.setUsername("BOB");
-        jmsConnectionFactory.setPassword("PASSWORD");
+        org.apache.qpid.jms.JmsConnectionFactory jmsConnectionFactory = new org.apache.qpid.jms.JmsConnectionFactory("amqp://localhost:5672");
+        jmsConnectionFactory.setUsername("guest");
+        jmsConnectionFactory.setPassword("guest");
         try
         {
             jmsConnectionFactory.createConnection().createSession();
