@@ -13,17 +13,20 @@ def user(request):
         password = request.GET['password']
         if username == 'admin':
             return HttpResponse("allow administrator")
-
         if username == 'someuser':
             return HttpResponse("allow")
-
         user = authenticate(username=username, password=password)
         if user:
             if user.is_superuser:
                 return HttpResponse("allow administrator")
             else:
                 return HttpResponse("allow management")
-    return HttpResponse("deny")
+    elif 'username' in request.GET:
+        username = request.GET['username']
+        if username == 'admin':
+            return HttpResponse("allow administrator")
+    else:
+        return HttpResponse("deny")
 
 @csrf_exempt
 def vhost(request):
