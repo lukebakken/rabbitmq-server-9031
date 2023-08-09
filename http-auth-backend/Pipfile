@@ -14,4 +14,5 @@ pylint = "*"
 python_version = "3.11"
 
 [scripts]
-run = "python manage.py migrate; python manage.py runserver 0.0.0.0:8000"
+migrate = "python manage.py migrate"
+runserver = "python manage.py runserver 0.0.0.0:8000"
