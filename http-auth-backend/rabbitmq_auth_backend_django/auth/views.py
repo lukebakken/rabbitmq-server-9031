@@ -21,10 +21,6 @@ def user(request):
                 return HttpResponse("allow administrator")
             else:
                 return HttpResponse("allow management")
-    elif 'username' in request.GET:
-        username = request.GET['username']
-        if username == 'admin':
-            return HttpResponse("allow administrator")
     else:
         return HttpResponse("deny")
 
