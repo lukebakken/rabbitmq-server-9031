@@ -1,3 +1,6 @@
+*.tar*
+*.xz
+rabbitmq_server*/
 .classpath
 .project
 .settings/
